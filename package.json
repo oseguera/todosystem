@@ -1,0 +1,10 @@
+{
+  "name": "todosystem",
+  "private": true,
+  "dependencies": {
+    "stimulus": "^1.1.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.1"
+  }
+}
