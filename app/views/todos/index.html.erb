@@ -1,5 +1,5 @@
 <div class="ToDo">
-  <%= image_tag asset_pack_path("media/images/logo.png"), 
+  <%= image_tag asset_pack_path("media/images/logo.png"),
     class: "Logo", alt: "Magma logo" %>
   <h1 class='ToDo-Header'>Magma labs To Do</h1>
   <div class='ToDo-Container' data-controller='todo'>
@@ -9,10 +9,10 @@
 
     <div class='ToDoInput'>
       <%= form_with model: @todo, local: false,
-        data: { action: 'ajax:beforeSend->todo#validateSubmit 
+        data: { action: 'ajax:beforeSend->todo#validateSubmit
           ajax:error->todo#errorResult ajax:success->todo#successResult' } do |form| %>
-        <%= form.text_field :name, data: { target: 'todo.field' } %>
-        <%= form.submit '+', class: 'ToDo-Add' %>
+         <p class="ToDoItem-Text"><%= form.text_field :name, data: { target: 'todo.field' } %><%= form.submit '+', class: 'ToDo-Add' %></p>
+
       <% end %>
     </div>
   </div>
