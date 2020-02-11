@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index
-    @todos = Todo.order(created_at: :desc)
+    @todos = Todo.order(created_at: :asc)
     @todo = Todo.new
   end
 
@@ -8,7 +8,7 @@ class TodosController < ApplicationController
     todo = Todo.new(todo_params)
 
     if todo.save
-      todo_html = render_to_string(partial: "todos/todo", 
+      todo_html = render_to_string(partial: "todos/todo",
                   locals: {todo: todo}, formats: [:html])
       return render(json: {id: todo.id, html: todo_html}, status: :created)
     end

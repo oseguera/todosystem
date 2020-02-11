@@ -11,7 +11,7 @@ export default class extends Controller {
     const response = event.detail[0]
     const todoHTML = document.createRange().createContextualFragment(response.html)
 
-    this.todosTarget.prepend(todoHTML)
+    this.todosTarget.append(todoHTML)
     this.fieldTarget.value = ""
   }
 
