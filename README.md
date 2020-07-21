@@ -10,9 +10,13 @@ We are using for this version Ruby `2.5.3`.
 ## Node Version
 You need Node at least in the next version `v12.14.0`
 
+## Install All Required dependencies'
+`$ bundle install`
+`$ yarn install`
+
 ## In order to run the app you have to run  the next commands
 ### Terminal window 1
-`$ bin/webpack-dev-server`
+`$ ./bin/webpack-dev-server`
 
 ### Terminal window 2
-`$ bin/rails s`
+`$ ./bin/rails s` or `rails s`
